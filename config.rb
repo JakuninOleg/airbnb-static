@@ -52,6 +52,7 @@ end
 #     "Helping"
 #   end
 # end
+set :site_url, ""
 
 set :css_dir, 'stylesheets'
 
@@ -73,12 +74,15 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
   set :relative_links, true
+  set :site_url, "/airbnb-static"
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
   #
   require_relative "./lib/build_cleaner"
   activate :build_cleaner
+
+
 end
 
 # Deployment
